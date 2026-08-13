@@ -262,3 +262,2653 @@
 }
 
 </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ADMASTER LK | Professional Design Services</title>
+
+<meta name="description"
+content="ADMASTER LK - Professional Logo, Advertisement, Social Media, Banner, Business Card, Brochure, Menu and Creative Design Services in Sri Lanka.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --bg:#08090d;
+    --card:#11131a;
+    --card2:#0a0c10;
+    --border:#292d37;
+    --text:#fff;
+    --muted:#aeb5c2;
+    --orange:#ff4d2e;
+    --yellow:#ffad1f;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    transition:.3s;
+}
+
+body.light{
+    --bg:#f5f6f8;
+    --card:#fff;
+    --card2:#f0f1f4;
+    --border:#d8dbe2;
+    --text:#111;
+    --muted:#555;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+textarea,
+select{
+    font-family:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(8,9,13,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+}
+
+body.light nav{
+    background:rgba(255,255,255,.95);
+}
+
+.navbar{
+    min-height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:var(--orange);
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+}
+
+.nav-links a{
+    color:#ddd;
+    font-size:15px;
+    transition:.3s;
+}
+
+body.light .nav-links a{
+    color:#333;
+}
+
+.nav-links a:hover{
+    color:var(--orange);
+}
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.theme-btn{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    border:1px solid var(--border);
+    background:var(--card);
+    color:var(--text);
+    cursor:pointer;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 20px;
+    border-radius:12px;
+    font-weight:800;
+    transition:.3s;
+    border:0;
+    cursor:pointer;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-primary{
+    color:#111;
+    background:linear-gradient(135deg,#ff4d2e,#ffad1f);
+}
+
+.btn-outline{
+    border:1px solid #3a3e48;
+    color:var(--text);
+    background:transparent;
+}
+
+/* HERO */
+
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    background:
+    radial-gradient(circle at 80% 20%,rgba(255,77,46,.18),transparent 35%),
+    radial-gradient(circle at 10% 70%,rgba(255,173,31,.08),transparent 35%);
+}
+
+.hero-content{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:30px;
+    background:#151820;
+    border:1px solid #343944;
+    color:#ff9c7e;
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+h1{
+    font-size:clamp(45px,7vw,78px);
+    line-height:1;
+    letter-spacing:-3px;
+    margin-bottom:25px;
+}
+
+h1 span{
+    background:linear-gradient(135deg,#ff4d2e,#ffad1f);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    color:var(--muted);
+    font-size:18px;
+    max-width:650px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.hero-card{
+    background:linear-gradient(145deg,#181b23,#0c0e13);
+    border:1px solid var(--border);
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 25px 80px rgba(0,0,0,.4);
+}
+
+.brand-box{
+    padding:70px 15px;
+    text-align:center;
+    border-radius:20px;
+    background:#0a0c10;
+    border:1px solid #30343e;
+}
+
+.brand-box h2{
+    font-size:40px;
+}
+
+.brand-box span{
+    color:var(--orange);
+}
+
+.brand-box p{
+    color:#999;
+    letter-spacing:3px;
+    font-size:12px;
+    margin-top:10px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:15px;
+}
+
+.stat{
+    text-align:center;
+    background:#0a0c10;
+    border:1px solid #242832;
+    border-radius:12px;
+    padding:14px 5px;
+}
+
+.stat strong{
+    display:block;
+    font-size:20px;
+}
+
+.stat small{
+    color:#999;
+}
+
+/* COMMON */
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 50px;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.section-title p{
+    color:var(--muted);
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.service-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:28px;
+    transition:.3s;
+    position:relative;
+    overflow:hidden;
+}
+
+.service-card:hover{
+    transform:translateY(-7px);
+    border-color:var(--orange);
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+}
+
+.service-number{
+    position:absolute;
+    top:15px;
+    right:18px;
+    color:#444954;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.service-icon{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.service-card h3{
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.description{
+    color:var(--muted);
+    font-size:14px;
+    min-height:70px;
+}
+
+.country{
+    margin-top:15px;
+    color:#aaa;
+    font-size:13px;
+}
+
+.prices{
+    margin-top:20px;
+    padding-top:17px;
+    border-top:1px solid var(--border);
+}
+
+.old-price{
+    color:#888;
+    text-decoration:line-through;
+    font-size:15px;
+}
+
+.sale-price{
+    color:var(--yellow);
+    font-size:24px;
+    font-weight:900;
+    margin-top:2px;
+}
+
+.order-btn{
+    display:block;
+    text-align:center;
+    margin-top:18px;
+    padding:11px;
+    border-radius:10px;
+    background:#181b22;
+    border:1px solid #343944;
+    color:#fff;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.order-btn:hover{
+    background:var(--orange);
+    border-color:var(--orange);
+}
+
+/* SEARCH */
+
+.search-box{
+    max-width:650px;
+    margin:0 auto 35px;
+}
+
+.search-box input{
+    width:100%;
+    padding:16px 20px;
+    border-radius:15px;
+    border:1px solid var(--border);
+    background:var(--card);
+    color:var(--text);
+    outline:none;
+    font-size:16px;
+}
+
+/* OFFERS */
+
+.offer{
+    background:linear-gradient(135deg,#ff4d2e,#ffad1f);
+    color:#111;
+    border-radius:25px;
+    padding:45px 30px;
+    text-align:center;
+    box-shadow:0 20px 50px rgba(255,77,46,.15);
+}
+
+.offer h2{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.offer p{
+    margin-bottom:22px;
+}
+
+/* PORTFOLIO */
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.portfolio-card{
+    min-height:210px;
+    border-radius:20px;
+    border:1px solid var(--border);
+    background:linear-gradient(135deg,#171a22,#0d0f13);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:25px;
+    transition:.3s;
+}
+
+.portfolio-card:hover{
+    transform:translateY(-6px);
+    border-color:var(--orange);
+}
+
+.portfolio-card .big-icon{
+    font-size:55px;
+    margin-bottom:12px;
+}
+
+.portfolio-card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* ORDER */
+
+.order-section{
+    background:radial-gradient(circle at 50% 0%,rgba(255,77,46,.08),transparent 45%);
+}
+
+.order-box{
+    max-width:850px;
+    margin:auto;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:25px;
+    padding:35px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:7px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:14px;
+    border-radius:12px;
+    border:1px solid var(--border);
+    background:var(--card2);
+    color:var(--text);
+    outline:none;
+}
+
+.form-group textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.photo-upload{
+    width:100%;
+    min-height:130px;
+    border:2px dashed #343944;
+    border-radius:15px;
+    background:var(--card2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    cursor:pointer;
+    padding:20px;
+}
+
+.photo-upload:hover{
+    border-color:var(--orange);
+}
+
+.photo-upload input{
+    display:none;
+}
+
+.file-name{
+    margin-top:8px;
+    color:#aaa;
+    font-size:13px;
+}
+
+/* REVIEWS */
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.review-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:25px;
+}
+
+.stars{
+    color:#ffad1f;
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.review-card p{
+    color:var(--muted);
+    margin-bottom:18px;
+}
+
+.review-name{
+    font-weight:bold;
+}
+
+/* ORDER STATUS */
+
+.status-box{
+    max-width:650px;
+    margin:auto;
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.status-box input{
+    width:100%;
+    padding:14px;
+    border-radius:12px;
+    border:1px solid var(--border);
+    background:var(--card2);
+    color:var(--text);
+    margin:15px 0;
+}
+
+.status-result{
+    margin-top:15px;
+    color:#ffad1f;
+    font-weight:bold;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+
+.faq-item{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:15px;
+    margin-bottom:12px;
+    overflow:hidden;
+}
+
+.faq-question{
+    width:100%;
+    padding:20px;
+    background:none;
+    border:0;
+    color:var(--text);
+    text-align:left;
+    font-weight:bold;
+    font-size:16px;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+}
+
+.faq-answer{
+    display:none;
+    padding:0 20px 20px;
+    color:var(--muted);
+}
+
+.faq-item.active .faq-answer{
+    display:block;
+}
+
+/* SOCIAL MEDIA */
+
+.admaster-social{
+    width:100%;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.admaster-social h2{
+    margin:0 0 8px;
+    color:var(--text);
+    font-size:32px;
+    font-weight:800;
+}
+
+.admaster-social p{
+    margin:0 0 30px;
+    color:#999;
+}
+
+.admaster-social-buttons{
+    max-width:650px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.social-card{
+    min-height:82px;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    border-radius:18px;
+    color:white;
+    transition:.3s ease;
+}
+
+.social-card:hover{
+    transform:translateY(-5px);
+}
+
+.social-icon{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    font-weight:900;
+    flex-shrink:0;
+}
+
+.social-text{
+    flex:1;
+    text-align:left;
+}
+
+.social-text strong{
+    display:block;
+    font-size:18px;
+    margin-bottom:4px;
+}
+
+.social-text span{
+    font-size:13px;
+    color:#ddd;
+}
+
+.social-arrow{
+    font-size:25px;
+    font-weight:bold;
+}
+
+/* FACEBOOK */
+
+.facebook-card{
+    background:#1877F2;
+    border:2px solid #1877F2;
+}
+
+.facebook-icon{
+    background:#fff;
+    color:#1877F2;
+}
+
+/* TIKTOK */
+
+.tiktok-card{
+    background:#050505;
+    border:2px solid #FF0050;
+}
+
+.tiktok-icon{
+    background:#fff;
+    color:#000;
+}
+
+.tiktok-card:hover{
+    border-color:#00F2EA;
+    box-shadow:
+    0 0 15px #FF0050,
+    0 0 30px #00F2EA;
+}
+
+/* INSTAGRAM */
+
+.instagram-card{
+    background:linear-gradient(
+        135deg,
+        #833AB4,
+        #E1306C,
+        #F77737,
+        #FCAF45
+    );
+    border:2px solid #E1306C;
+}
+
+.instagram-icon{
+    background:#fff;
+    color:#E1306C;
+}
+
+/* CONTACT */
+
+.contact{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.contact-card{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:25px;
+    border-radius:18px;
+    transition:.3s;
+}
+
+.contact-card:hover{
+    border-color:var(--orange);
+    transform:translateY(-3px);
+}
+
+.contact-icon{
+    font-size:32px;
+}
+
+.contact-card p{
+    color:#aaa;
+}
+
+/* CTA */
+
+.cta{
+    text-align:center;
+    padding:65px 25px;
+    border-radius:25px;
+    border:1px solid var(--border);
+    background:linear-gradient(135deg,#171a22,#0d0f13);
+}
+
+.cta h2{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    color:#aaa;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #252832;
+    padding:25px 0;
+    color:#999;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:999;
+    background:#20c76a;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    font-weight:bold;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        padding:70px 0;
+    }
+
+    .hero-content{
+        grid-template-columns:1fr;
+    }
+
+    .hero-card{
+        order:-1;
+    }
+
+    .services,
+    .portfolio-grid,
+    .review-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:65px 0;
+    }
+
+    .section-title h2{
+        font-size:34px;
+    }
+
+    .cta h2{
+        font-size:32px;
+    }
+
+    .footer-content{
+        flex-direction:column;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+
+    .whatsapp{
+        right:12px;
+        bottom:12px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="container navbar">
+
+<a href="#home" class="logo">
+ADMASTER <span>LK</span>
+</a>
+
+<div class="nav-links">
+
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#order">Order</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<div class="nav-actions">
+
+<button
+class="theme-btn"
+onclick="toggleTheme()"
+title="Change Theme">
+🌙
+</button>
+
+<a
+href="https://wa.me/94760968854"
+target="_blank"
+class="btn btn-primary">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+<div>
+
+<span class="badge">
+🎨 Professional Creative Design Studio
+</span>
+
+<h1>
+Your Idea.<br>
+<span>Our Design.</span>
+</h1>
+
+<p>
+Professional and creative design services for businesses,
+brands, creators and individuals. We turn your ideas into
+high-quality visual designs.
+</p>
+
+<div class="buttons">
+
+<a
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I%20want%20to%20order%20a%20design"
+target="_blank"
+class="btn btn-primary">
+🚀 Order a Design
+</a>
+
+<a
+href="#services"
+class="btn btn-outline">
+View Services
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="brand-box">
+
+<h2>
+ADMASTER <span>LK</span>
+</h2>
+
+<p>
+QUALITY DESIGNS
+</p>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<strong>12+</strong>
+<small>Services</small>
+</div>
+
+<div class="stat">
+<strong>100%</strong>
+<small>Creative</small>
+</div>
+
+<div class="stat">
+<strong>LK</strong>
+<small>Based</small>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SPECIAL OFFERS -->
+
+<section>
+
+<div class="container">
+
+<div class="offer">
+
+<h2>
+🔥 Special Design Offers
+</h2>
+
+<p>
+Professional designs at affordable SALE prices.
+Order today and turn your idea into a professional design.
+</p>
+
+<a
+href="#order"
+class="btn btn-outline">
+Order Now →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Our Services
+</h2>
+
+<p>
+Professional creative design services with affordable
+prices and special sale offers.
+</p>
+
+</div>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="🔎 Search a service..."
+onkeyup="searchServices()">
+
+</div>
+
+
+<div
+class="services"
+id="serviceList">
+
+
+<!-- 01 -->
+
+<div class="service-card">
+
+<span class="service-number">01</span>
+
+<div class="service-icon">🎨</div>
+
+<h3>
+Logo Design
+</h3>
+
+<p class="description">
+Professional, unique and creative logo design for your
+business or brand. Custom design based on your idea.
+</p>
+
+<p class="country">
+🌍 Country of Origin: Sri Lanka
+</p>
+
+<div class="prices">
+
+<div class="old-price">
+Original Price: LKR 4,000
+</div>
+
+<div class="sale-price">
+Sale Price: LKR 3,500
+</div>
+
+</div>
+
+<a
+class="order-btn"
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I%20want%20Logo%20Design"
+target="_blank">
+Order Now →
+</a>
+
+</div>
+
+
+<!-- 02 -->
+
+<div class="service-card">
+
+<span class="service-number">02</span>
+
+<div class="service-icon">📢</div>
+
+<h3>
+Advertisement Design
+</h3>
+
+<p class="description">
+Creative and eye-catching advertisement designs for
+businesses, products, services and promotions.
+</p>
+
+<p class="country">
+🌍 Country of Origin: Sri Lanka
+</p>
+
+<div class="prices">
+
+<div class="old-price">
+Original Price: LKR 2,500
+</div>
+
+<div class="sale-price">
+Sale Price: LKR 2,000
+</div>
+
+</div>
+
+<a
+class="order-btn"
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I%20want%20Advertisement%20Design"
+target="_blank">
+Order Now →
+</a>
+
+</div>
+
+
+<!-- 03 -->
+
+<div class="service-card">
+
+<span class="service-number">03</span>
+
+<div class="service-icon">📱</div>
+
+<h3>
+Social Media Post Design
+</h3>
+
+<p class="description">
+Attractive custom designs for Facebook, Instagram,
+TikTok and other social media platforms.
+</p>
+
+<p class="country">
+🌍 Country of Origin: Sri Lanka
+</p>
+
+<div class="prices">
+
+<div class="old-price">
+Original Price: LKR 1,500
+</div>
+
+<div class="sale-price">
+Sale Price: LKR 1,000
+</div>
+
+</div>
+
+<a
+class="order-btn"
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I%20want%20Social%20Media%20Post%20Design"
+target="_blank">
+Order Now →
+</a>
+
+</div>
+
+
+<!-- 04 -->
+
+<div class="service-card">
+
+<span class="service-number">04</span>
+
+<div class="service-icon">🖼️</div>
+
+<h3>
+Banner Design
+</h3>
+
+<p class="description">
+Professional banner designs for social media,
+websites, business promotions and advertisements.
+</p>
+
+<p class="country">
+🌍 Country of Origin: Sri Lanka
+</p>
+
+<div class="prices">
+
+<div class="old-price">
+Original Price: LKR 2,000
+</div>
+
+<div class="sale-price">
+Sale Price: LKR 1,500
+</div>
+
+</div>
+
+<a
+class="order-btn"
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I%20want%20Banner%20Design"
+target="_blank">
+Order Now →
+</a>
+
+</div>
+
+
+<!-- 05 -->
+
+<div class="service-card">
+
+<span class="service-number">05</span>
+
+<div class="service-icon">💳</div>
+
+<h3>
+Business Card Design
+</h3>
+
+<p class="description">
+Modern and professional business card design
+that represents your brand.
+</p>
+
+<p class="country">
+🌍 Country of Origin: Sri Lanka
+</p>
+
+<div class="prices">
+
+<div class="old-price">
+Original Price: LKR 1,500
+</div>
+
+<div class="sale-price">
+Sale Price: LKR 1,000
+</div>
+
+</div>
+
+<a
+class="order-btn"
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I%20want%20Business%20Card%20Design"
+target="_blank">
+Order Now →
+</a>
+
+</div>
+
+
+<!-- 06 -->
+
+<div class="service-card">
+
+<span class="service-number">06</span>
+
+<div class="service-icon">📖</div>
+
+<h3>
+Brochure Design
+</h3>
+
+<p class="description">
+Professional brochure designs to showcase your
+business, products and services.
+</p>
+
+<p class="country">
+🌍 Country of Origin: Sri Lanka
+</p>
+
+<div class="prices">
+
+<div class="old-price">
+Original Price: LKR 3,000
+</div>
+
+<div class="sale-price">
+Sale Price: LKR 2,500
+</div>
+
+</div>
+
+<a
+class="order-btn"
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I%20want%20Brochure%20Design"
+target="_blank">
+Order Now →
+</a>
+
+</div>
+
+
+<!-- 07 -->
+
+<div class="service-card">
+
+<span class="service-number">07</span>
+
+<div class="service-icon">🍽️</div>
+
+<h3>
+Menu Design
+</h3>
+
+<p class="description">
+Attractive and modern menu designs for restaurants,
+cafés and food businesses.
+</p>
+
+<p class="country">
+🌍 Country of Origin: Sri Lanka
+</p>
+
+<div class="prices">
+
+<div class="old-price">
+Original Price: LKR 2,500
+</div>
+
+<div class="sale-price">
+Sale Price: LKR 2,000
+</div>
+
+</div>
+
+<a
+class="order-btn"
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I%20want%20Menu%20Design"
+target="_blank">
+Order Now →
+</a>
+
+</div>
+
+
+<!-- 08 -->
+
+<div class="service-card">
+
+<span class="service-number">08</span>
+
+<div class="service-icon">🎬</div>
+
+<h3>
+Logo Animation
+</h3>
+
+<p class="description">
+Creative logo animation videos to give your brand
+a professional digital look.
+</p>
+
+<p class="country">
+🌍 Country of Origin: Sri Lanka
+</p>
+
+<div class="prices">
+
+<div class="old-price">
+Original Price: LKR 4,500
+</div>
+
+<div class="sale-price">
+Sale Price: LKR 3,500
+</div>
+
+</div>
+
+<a
+class="order-btn"
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I%20want%20Logo%20Animation"
+target="_blank">
+Order Now →
+</a>
+
+</div>
+
+
+<!-- 09 -->
+
+<div class="service-card">
+
+<span class="service-number">09</span>
+
+<div class="service-icon">📦</div>
+
+<h3>
+Packaging Design
+</h3>
+
+<p class="description">
+Creative packaging designs that make your product
+look professional and stand out.
+</p>
+
+<p class="country">
+🌍 Country of Origin: Sri Lanka
+</p>
+
+<div class="prices">
+
+<div class="old-price">
+Original Price: LKR 4,000
+</div>
+
+<div class="sale-price">
+Sale Price: LKR 3,500
+</div>
+
+</div>
+
+<a
+class="order-btn"
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I%20want%20Packaging%20Design"
+target="_blank">
+Order Now →
+</a>
+
+</div>
+
+
+<!-- 10 -->
+
+<div class="service-card">
+
+<span class="service-number">10</span>
+
+<div class="service-icon">▶️</div>
+
+<h3>
+YouTube Thumbnail
+</h3>
+
+<p class="description">
+High-quality and eye-catching YouTube thumbnail
+designs created to make your videos stand out.
+</p>
+
+<p class="country">
+🌍 Country of Origin: Sri Lanka
+</p>
+
+<div class="prices">
+
+<div class="old-price">
+Original Price: LKR 1,000
+</div>
+
+<div class="sale-price">
+Sale Price: LKR 750
+</div>
+
+</div>
+
+<a
+class="order-btn"
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I%20want%20YouTube%20Thumbnail"
+target="_blank">
+Order Now →
+</a>
+
+</div>
+
+
+<!-- 11 -->
+
+<div class="service-card">
+
+<span class="service-number">11</span>
+
+<div class="service-icon">⌨️</div>
+
+<h3>
+Typing &amp; Design
+</h3>
+
+<p class="description">
+Sinhala, English and other language typing and basic
+design services available.
+</p>
+
+<p class="country">
+🌍 Country of Origin: Sri Lanka
+</p>
+
+<div class="prices">
+
+<div class="old-price">
+Original Price: LKR 1,000
+</div>
+
+<div class="sale-price">
+Sale Price: LKR 750
+</div>
+
+</div>
+
+<a
+class="order-btn"
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I%20want%20Typing%20%26%20Design"
+target="_blank">
+Order Now →
+</a>
+
+</div>
+
+
+<!-- 12 -->
+
+<div class="service-card">
+
+<span class="service-number">12</span>
+
+<div class="service-icon">💌</div>
+
+<h3>
+Invitation Design
+</h3>
+
+<p class="description">
+Beautiful custom invitation designs for birthdays,
+weddings, parties and special events.
+</p>
+
+<p class="country">
+🌍 Country of Origin: Sri Lanka
+</p>
+
+<div class="prices">
+
+<div class="old-price">
+Original Price: LKR 1,500
+</div>
+
+<div class="sale-price">
+Sale Price: LKR 1,000
+</div>
+
+</div>
+
+<a
+class="order-btn"
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I%20want%20Invitation%20Design"
+target="_blank">
+Order Now →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+🖼️ Our Portfolio
+</h2>
+
+<p>
+Some of the design categories we create for our customers.
+</p>
+
+</div>
+
+<div class="portfolio-grid">
+
+<div class="portfolio-card">
+<div class="big-icon">🎨</div>
+<h3>Logo Projects</h3>
+<p>Creative brand identity and logo concepts.</p>
+</div>
+
+<div class="portfolio-card">
+<div class="big-icon">📢</div>
+<h3>Advertisement Projects</h3>
+<p>Eye-catching promotional designs.</p>
+</div>
+
+<div class="portfolio-card">
+<div class="big-icon">📱</div>
+<h3>Social Media Designs</h3>
+<p>Professional social media creatives.</p>
+</div>
+
+<div class="portfolio-card">
+<div class="big-icon">🖼️</div>
+<h3>Banner Designs</h3>
+<p>Modern banners for brands and businesses.</p>
+</div>
+
+<div class="portfolio-card">
+<div class="big-icon">💳</div>
+<h3>Business Cards</h3>
+<p>Professional business identity designs.</p>
+</div>
+
+<div class="portfolio-card">
+<div class="big-icon">📦</div>
+<h3>Packaging</h3>
+<p>Creative product packaging concepts.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ORDER FORM -->
+
+<section id="order" class="order-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+🛒 Place Your Order
+</h2>
+
+<p>
+Send your design requirements directly to ADMASTER LK.
+</p>
+
+</div>
+
+<div class="order-box">
+
+<form id="orderForm">
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label>Your Name</label>
+
+<input
+type="text"
+id="customerName"
+placeholder="Enter your name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>WhatsApp Number</label>
+
+<input
+type="tel"
+id="customerPhone"
+placeholder="07XXXXXXXX"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Select Service</label>
+
+<select
+id="orderService"
+required>
+
+<option value="">
+-- Select Service --
+</option>
+
+<option>Logo Design</option>
+<option>Advertisement Design</option>
+<option>Social Media Post Design</option>
+<option>Banner Design</option>
+<option>Business Card Design</option>
+<option>Brochure Design</option>
+<option>Menu Design</option>
+<option>Logo Animation</option>
+<option>Packaging Design</option>
+<option>YouTube Thumbnail</option>
+<option>Typing & Design</option>
+<option>Invitation Design</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Preferred Deadline
+</label>
+
+<input
+type="date"
+id="deadline">
+
+</div>
+
+
+<div class="form-group full">
+
+<label>
+Describe Your Design Idea
+</label>
+
+<textarea
+id="designIdea"
+placeholder="Tell us about your design idea, colors, text, size, etc."
+required>
+</textarea>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>
+Reference Photo / File
+</label>
+
+<label class="photo-upload">
+
+<input
+type="file"
+id="referenceFile"
+accept="image/*">
+
+<span>
+📸 Click here to select a reference image
+<br>
+<small>
+Image will be selected on your device
+</small>
+</span>
+
+</label>
+
+<div
+class="file-name"
+id="fileName">
+No file selected
+</div>
+
+</div>
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-primary">
+🚀 Send Order to WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Why Choose ADMASTER LK?
+</h2>
+
+<p>
+We focus on creative, professional and affordable designs
+that help your brand stand out.
+</p>
+
+</div>
+
+<div class="services">
+
+<div class="service-card">
+
+<div class="service-icon">
+✨
+</div>
+
+<h3>
+Creative Designs
+</h3>
+
+<p class="description">
+Unique concepts created according to your idea,
+brand and requirements.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+💰
+</div>
+
+<h3>
+Affordable Prices
+</h3>
+
+<p class="description">
+Professional design services at affordable prices
+with special sale offers.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🇱🇰
+</div>
+
+<h3>
+Sri Lankan Service
+</h3>
+
+<p class="description">
+Proudly providing creative design services from Sri Lanka.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CUSTOMER REVIEWS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+⭐ Customer Feedback
+</h2>
+
+<p>
+What customers can say about their experience with ADMASTER LK.
+</p>
+
+</div>
+
+<div class="review-grid">
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Very creative design and excellent communication.
+Highly recommended.”
+</p>
+
+<div class="review-name">
+— ADMASTER LK Customer
+</div>
+
+</div>
+
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Professional work with a great final result.
+The design matched my idea perfectly.”
+</p>
+
+<div class="review-name">
+— Happy Customer
+</div>
+
+</div>
+
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Affordable price and good quality design service.”
+</p>
+
+<div class="review-name">
+— ADMASTER LK Customer
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ORDER STATUS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+📋 Order Status
+</h2>
+
+<p>
+Enter your order ID to check the current status.
+</p>
+
+</div>
+
+<div class="status-box">
+
+<input
+type="text"
+id="orderId"
+placeholder="Enter Order ID">
+
+<button
+class="btn btn-primary"
+onclick="checkStatus()">
+🔎 Check Status
+</button>
+
+<div
+class="status-result"
+id="statusResult">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+❓ Frequently Asked Questions
+</h2>
+
+<p>
+Some common questions about ADMASTER LK services.
+</p>
+
+</div>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<button
+class="faq-question"
+onclick="toggleFAQ(this)">
+
+How can I place an order?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+Select a service, fill in the order form and send the details
+to our WhatsApp.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button
+class="faq-question"
+onclick="toggleFAQ(this)">
+
+Can I send a reference image?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+Yes. You can select a reference image in the order form
+before sending your requirements.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button
+class="faq-question"
+onclick="toggleFAQ(this)">
+
+Can I request custom designs?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+Yes. Every design can be customized according to your
+brand, idea, colors and requirements.
+
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<button
+class="faq-question"
+onclick="toggleFAQ(this)">
+
+How do I contact ADMASTER LK?
+
+<span>+</span>
+
+</button>
+
+<div class="faq-answer">
+
+You can contact us through WhatsApp, phone, email or
+our social media pages.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section>
+
+<div class="container">
+
+<div class="cta">
+
+<h2>
+Have a Design Idea?
+</h2>
+
+<p>
+Send us your idea today and let's create something amazing.
+</p>
+
+<a
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I%20have%20a%20design%20idea"
+target="_blank"
+class="btn btn-primary">
+📲 Start Your Order
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SOCIAL MEDIA -->
+
+<section class="admaster-social">
+
+<h2>
+Follow ADMASTER LK
+</h2>
+
+<p>
+Connect with us on Social Media
+</p>
+
+<div class="admaster-social-buttons">
+
+
+<!-- FACEBOOK -->
+
+<a
+href="https://www.facebook.com/ADMASTERLK"
+target="_blank"
+rel="noopener noreferrer"
+class="social-card facebook-card">
+
+<div class="social-icon facebook-icon">
+f
+</div>
+
+<div class="social-text">
+
+<strong>
+Facebook
+</strong>
+
+<span>
+@ADMASTERLK
+</span>
+
+</div>
+
+<div class="social-arrow">
+→
+</div>
+
+</a>
+
+
+<!-- TIKTOK -->
+
+<a
+href="https://www.tiktok.com/@admasterlk"
+target="_blank"
+rel="noopener noreferrer"
+class="social-card tiktok-card">
+
+<div class="social-icon tiktok-icon">
+♪
+</div>
+
+<div class="social-text">
+
+<strong>
+TikTok
+</strong>
+
+<span>
+@admasterlk
+</span>
+
+</div>
+
+<div class="social-arrow">
+→
+</div>
+
+</a>
+
+
+<!-- INSTAGRAM -->
+
+<a
+href="https://www.instagram.com/admasterlk.ads/"
+target="_blank"
+rel="noopener noreferrer"
+class="social-card instagram-card">
+
+<div class="social-icon instagram-icon">
+◎
+</div>
+
+<div class="social-text">
+
+<strong>
+Instagram
+</strong>
+
+<span>
+@admasterlk.ads
+</span>
+
+</div>
+
+<div class="social-arrow">
+→
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Contact ADMASTER LK
+</h2>
+
+<p>
+Let's discuss your next design project.
+</p>
+
+</div>
+
+<div class="contact">
+
+
+<a
+href="tel:+94760968854"
+class="contact-card">
+
+<div class="contact-icon">
+📞
+</div>
+
+<div>
+
+<h3>
+Call / WhatsApp
+</h3>
+
+<p>
+0760968854
+</p>
+
+</div>
+
+</a>
+
+
+<a
+href="mailto:admasterlk.ads@gmail.com"
+class="contact-card">
+
+<div class="contact-icon">
+📧
+</div>
+
+<div>
+
+<h3>
+Email
+</h3>
+
+<p>
+admasterlk.ads@gmail.com
+</p>
+
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-content">
+
+<div>
+© 2026 <b>ADMASTER LK</b>. All Rights Reserved.
+</div>
+
+<div>
+Your Idea • Our Design
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/94760968854?text=Hi%20ADMASTER%20LK%2C%20I'm%20interested%20in%20your%20services"
+target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+
+<script>
+
+/* THEME */
+
+function toggleTheme(){
+
+    document.body.classList.toggle("light");
+
+    const button=document.querySelector(".theme-btn");
+
+    if(document.body.classList.contains("light")){
+
+        button.innerHTML="☀️";
+
+        localStorage.setItem(
+            "admasterTheme",
+            "light"
+        );
+
+    }else{
+
+        button.innerHTML="🌙";
+
+        localStorage.setItem(
+            "admasterTheme",
+            "dark"
+        );
+
+    }
+
+}
+
+
+if(localStorage.getItem("admasterTheme")==="light"){
+
+    document.body.classList.add("light");
+
+    document.querySelector(".theme-btn").innerHTML="☀️";
+
+}
+
+
+/* SERVICE SEARCH */
+
+function searchServices(){
+
+    const input=
+    document
+    .getElementById("serviceSearch")
+    .value
+    .toLowerCase();
+
+    const cards=
+    document
+    .querySelectorAll(".service-card");
+
+    cards.forEach(card=>{
+
+        const text=
+        card.innerText.toLowerCase();
+
+        if(text.includes(input)){
+
+            card.style.display="";
+
+        }else{
+
+            card.style.display="none";
+
+        }
+
+    });
+
+}
+
+
+/* FILE NAME */
+
+document
+.getElementById("referenceFile")
+.addEventListener(
+"change",
+function(){
+
+    const file=this.files[0];
+
+    document
+    .getElementById("fileName")
+    .innerText=
+    file
+    ? "📎 Selected: "+file.name
+    : "No file selected";
+
+});
+
+
+/* ORDER FORM */
+
+document
+.getElementById("orderForm")
+.addEventListener(
+"submit",
+function(e){
+
+    e.preventDefault();
+
+    const name=
+    document
+    .getElementById("customerName")
+    .value;
+
+    const phone=
+    document
+    .getElementById("customerPhone")
+    .value;
+
+    const service=
+    document
+    .getElementById("orderService")
+    .value;
+
+    const deadline=
+    document
+    .getElementById("deadline")
+    .value;
+
+    const idea=
+    document
+    .getElementById("designIdea")
+    .value;
+
+    const file=
+    document
+    .getElementById("referenceFile")
+    .files[0];
+
+    const orderNumber=
+    "AD"+
+    Math.floor(
+        10000+
+        Math.random()*90000
+    );
+
+    let message=
+
+`Hi ADMASTER LK 👋
+
+I want to place a design order.
+
+🆔 Order ID: ${orderNumber}
+
+👤 Name: ${name}
+
+📱 WhatsApp: ${phone}
+
+🎨 Service: ${service}
+
+📅 Deadline: ${deadline || "Not specified"}
+
+💡 Design Idea:
+${idea}
+
+📎 Reference File:
+${file ? file.name : "No file"}
+
+Thank you.`;
+
+    localStorage.setItem(
+        "lastOrderID",
+        orderNumber
+    );
+
+    window.open(
+        "https://wa.me/94760968854?text="+
+        encodeURIComponent(message),
+        "_blank"
+    );
+
+});
+
+
+/* ORDER STATUS */
+
+function checkStatus(){
+
+    const id=
+    document
+    .getElementById("orderId")
+    .value
+    .trim();
+
+    const result=
+    document
+    .getElementById("statusResult");
+
+    if(!id){
+
+        result.innerHTML=
+        "⚠️ Please enter your Order ID.";
+
+        return;
+    }
+
+    const saved=
+    localStorage.getItem(
+        "lastOrderID"
+    );
+
+    if(saved && id===saved){
+
+        result.innerHTML=
+        "🟡 Order Received — Please contact ADMASTER LK on WhatsApp for the latest update.";
+
+    }else{
+
+        result.innerHTML=
+        "ℹ️ Order ID not found in this browser. Please contact ADMASTER LK on WhatsApp.";
+
+    }
+
+}
+
+
+/* FAQ */
+
+function toggleFAQ(button){
+
+    const item=
+    button.parentElement;
+
+    item.classList.toggle("active");
+
+    const symbol=
+    button.querySelector("span");
+
+    symbol.innerText=
+    item.classList.contains("active")
+    ? "−"
+    : "+";
+
+}
+
+</script>
+
+</body>
+</html>
