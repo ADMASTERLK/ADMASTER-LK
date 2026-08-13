@@ -45,9 +45,7 @@
            rel="noopener noreferrer"
            class="social-card facebook-card">
 
-            <div class="social-icon facebook-icon">
-                f
-            </div>
+            <div class="social-icon facebook-icon">f</div>
 
             <div class="social-text">
                 <strong>Facebook</strong>
@@ -65,13 +63,29 @@
            rel="noopener noreferrer"
            class="social-card tiktok-card">
 
-            <div class="social-icon tiktok-icon">
-                ♪
-            </div>
+            <div class="social-icon tiktok-icon">♪</div>
 
             <div class="social-text">
                 <strong>TikTok</strong>
                 <span>@admasterlk</span>
+            </div>
+
+            <div class="social-arrow">→</div>
+
+        </a>
+
+
+        <!-- INSTAGRAM -->
+        <a href="https://www.instagram.com/admasterlk.ads/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="social-card instagram-card">
+
+            <div class="social-icon instagram-icon">◎</div>
+
+            <div class="social-text">
+                <strong>Instagram</strong>
+                <span>@admasterlk.ads</span>
             </div>
 
             <div class="social-arrow">→</div>
@@ -85,8 +99,6 @@
 
 <style>
 
-/* SOCIAL SECTION */
-
 .admaster-social{
     width:100%;
     padding:60px 20px;
@@ -95,18 +107,15 @@
 
 .admaster-social h2{
     margin:0 0 8px;
-    color:#ffffff;
+    color:#fff;
     font-size:32px;
     font-weight:800;
 }
 
 .admaster-social p{
     margin:0 0 30px;
-    color:#999999;
+    color:#999;
 }
-
-
-/* BUTTON AREA */
 
 .admaster-social-buttons{
     max-width:650px;
@@ -116,48 +125,34 @@
     gap:18px;
 }
 
-
-/* COMMON CARD */
-
 .social-card{
     min-height:82px;
     padding:15px 20px;
-
     display:flex;
     align-items:center;
     gap:16px;
-
     border-radius:18px;
-
     color:white;
     text-decoration:none;
-
     box-sizing:border-box;
-
     transition:.3s ease;
 }
 
-
-/* ICON */
+.social-card:hover{
+    transform:translateY(-5px);
+}
 
 .social-icon{
     width:52px;
     height:52px;
-
     border-radius:50%;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     font-size:30px;
     font-weight:900;
-
     flex-shrink:0;
 }
-
-
-/* TEXT */
 
 .social-text{
     flex:1;
@@ -172,11 +167,8 @@
 
 .social-text span{
     font-size:13px;
-    color:#dddddd;
+    color:#ddd;
 }
-
-
-/* ARROW */
 
 .social-arrow{
     font-size:25px;
@@ -184,58 +176,63 @@
 }
 
 
-/* ========================= */
-/* FACEBOOK COLORS */
-/* ========================= */
+/* FACEBOOK */
 
 .facebook-card{
     background:#1877F2;
     border:2px solid #1877F2;
-
-    box-shadow:0 5px 20px rgba(24,119,242,.25);
 }
 
 .facebook-icon{
-    background:#ffffff;
+    background:#fff;
     color:#1877F2;
 }
 
-.facebook-card:hover{
-    transform:translateY(-5px);
-    background:#166FE5;
 
-    box-shadow:
-        0 10px 30px rgba(24,119,242,.45);
-}
-
-
-/* ========================= */
-/* TIKTOK COLORS */
-/* ========================= */
+/* TIKTOK */
 
 .tiktok-card{
     background:#050505;
-
     border:2px solid #FF0050;
-
-    box-shadow:
-        0 5px 20px rgba(255,0,80,.25);
 }
 
 .tiktok-icon{
-    background:#ffffff;
-    color:#000000;
+    background:#fff;
+    color:#000;
 }
 
 .tiktok-card:hover{
-
-    transform:translateY(-5px);
-
     border-color:#00F2EA;
-
     box-shadow:
         0 0 15px #FF0050,
         0 0 30px #00F2EA;
+}
+
+
+/* INSTAGRAM */
+
+.instagram-card{
+    background:linear-gradient(
+        135deg,
+        #833AB4,
+        #E1306C,
+        #F77737,
+        #FCAF45
+    );
+
+    border:2px solid #E1306C;
+
+    box-shadow:0 5px 20px rgba(225,48,108,.25);
+}
+
+.instagram-icon{
+    background:#fff;
+    color:#E1306C;
+}
+
+.instagram-card:hover{
+    box-shadow:
+        0 10px 30px rgba(225,48,108,.45);
 }
 
 
