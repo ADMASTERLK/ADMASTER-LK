@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://admasterlk.github.io/ADMASTER-LK/sitemap.xml
