@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Horizon Drive — ADMASTER LK</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#07101b;font-family:Inter,system-ui,Arial;color:#fff}
+canvas{display:block;width:100%;height:100%}
+#hud{position:fixed;inset:0;pointer-events:none}
+.top{display:flex;justify-content:space-between;gap:12px;padding:18px;align-items:flex-start}
+.card{background:rgba(5,10,18,.62);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:10px 14px;box-shadow:0 10px 30px #0005}
+.brand{font-weight:900;letter-spacing:2px}.muted{font-size:11px;opacity:.65}.big{font-size:24px;font-weight:900}
+#start{position:fixed;inset:0;display:grid;place-items:center;background:linear-gradient(#02050a88,#02050add)}
+.panel{text-align:center;width:min(92vw,520px);padding:34px;border:1px solid #ffffff22;border-radius:24px;background:#07101bf2;box-shadow:0 30px 100px #000}
+h1{font-size:clamp(38px,8vw,72px);margin:0 0 6px;letter-spacing:-3px}.accent{color:#5ee7ff}
+button{border:0;border-radius:12px;padding:14px 28px;font-size:16px;font-weight:800;cursor:pointer;background:#5ee7ff;color:#06101a;box-shadow:0 8px 25px #5ee7ff33}
+#controls{position:fixed;bottom:20px;left:20px;display:flex;gap:8px;pointer-events:auto}
+.key{width:58px;height:50px;border-radius:12px;border:1px solid #fff2;background:#07101bcc;color:#fff;font-weight:800;display:grid;place-items:center;user-select:none}
+#nitro{position:fixed;right:20px;bottom:20px;width:150px}.bar{height:9px;border-radius:99px;background:#fff2;overflow:hidden}.fill{height:100%;width:100%;background:#5ee7ff}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<canvas id="game"></canvas>
+<div id="hud">
+ <div class="top">
+  <div class="card"><div class="brand">HORIZON DRIVE</div><div class="muted">Sri Lanka • Free Road</div></div>
+  <div style="display:flex;gap:8px">
+   <div class="card"><div class="muted">SPEED</div><div class="big"><span id="speed">0</span> <small>KM/H</small></div></div>
+   <div class="card"><div class="muted">DISTANCE</div><div class="big"><span id="dist">0.0</span> KM</div></div>
+  </div>
+ </div>
+ <div id="nitro" class="card"><div class="muted">NITRO [SPACE]</div><div class="bar"><div id="nitroFill" class="fill"></div></div></div>
+ <div id="controls"><div class="key">A / ←</div><div class="key">D / →</div><div class="key">W / ↑</div><div class="key">S / ↓</div></div>
+</div>
+<div id="start">
+ <div class="panel">
+  <div class="muted">ADMASTER LK PRESENTS</div>
+  <h1>HORIZON <span class="accent">DRIVE</span></h1>
+  <p>Drive a sports car through an endless Sri Lankan-style highway. Dodge traffic, use nitro and beat your distance record.</p>
+  <button id="play">START DRIVE</button>
+  <p class="muted">Keyboard: W/S speed • A/D steer • SPACE nitro • P pause</p>
+ </div>
+</div>
+<script>
+const c=document.getElementById('game'),x=c.getContext('2d');let W,H,dpr;
+function resize(){dpr=devicePixelRatio||1;W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}addEventListener('resize',resize);resize();
+const keys={};addEventListener('keydown',e=>{keys[e.key.toLowerCase()]=1;if([' ','arrowup','arrowdown','arrowleft','arrowright'].includes(e.key.toLowerCase()))e.preventDefault();if(e.key.toLowerCase()==='p')paused=!paused});addEventListener('keyup',e=>keys[e.key.toLowerCase()]=0);
+let running=false,paused=false,t=0,dist=0,speed=0,nitro=100,lane=0,target=0,spawn=0,traffic=[],best=+localStorage.horizonBest||0;
+const road={width:Math.min(520,innerWidth*.78)};
+function rnd(a,b){return a+Math.random()*(b-a)}
+function reset(){running=true;paused=false;t=0;dist=0;speed=0;nitro=100;lane=0;target=0;traffic=[];document.getElementById('start').classList.add('hidden')}
+function car(px,py,w,h,body,player=false){x.save();x.translate(px,py);x.fillStyle='#0006';x.beginPath();x.ellipse(0,h*.42,w*.65,h*.16,0,0,Math.PI*2);x.fill();x.fillStyle=body;x.roundRect(-w/2,-h/2,w,h,Math.min(12,w*.18));x.fill();x.fillStyle=player?'#dff9ff':'#222';x.roundRect(-w*.32,-h*.18,w*.64,h*.3,5);x.fill();x.fillStyle='#111';x.fillRect(-w*.57,-h*.3,w*.14,h*.25);x.fillRect(w*.43,-h*.3,w*.14,h*.25);x.fillStyle='#111';x.fillRect(-w*.57,h*.08,w*.14,h*.25);x.fillRect(w*.43,h*.08,w*.14,h*.25);if(player){x.fillStyle='#fff';x.fillRect(-w*.34,h*.35,w*.2,4);x.fillRect(w*.14,h*.35,w*.2,4)}x.restore()}
+function draw(){x.clearRect(0,0,W,H);
+ let horizon=H*.42, roadW=road.width; let g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'#79bfe8');g.addColorStop(.42,'#d9c58f');g.addColorStop(1,'#3b7a46');x.fillStyle=g;x.fillRect(0,0,W,H);
+ // distant hills
+ x.fillStyle='#527b55';x.beginPath();x.moveTo(0,horizon);for(let i=0;i<=W;i+=40)x.lineTo(i,horizon-rnd(15,80));x.lineTo(W,horizon);x.fill();
+ // road perspective
+ x.fillStyle='#24282d';x.beginPath();x.moveTo(W/2-roadW*.12,horizon);x.lineTo(W/2+roadW*.12,horizon);x.lineTo(W/2+roadW*.62,H);x.lineTo(W/2-roadW*.62,H);x.closePath();x.fill();
+ x.fillStyle='#d8c66b';x.beginPath();x.moveTo(W/2-roadW*.14,horizon);x.lineTo(W/2-roadW*.11,horizon);x.lineTo(W/2-roadW*.59,H);x.lineTo(W/2-roadW*.55,H);x.closePath();x.fill();x.beginPath();x.moveTo(W/2+roadW*.14,horizon);x.lineTo(W/2+roadW*.11,horizon);x.lineTo(W/2+roadW*.59,H);x.lineTo(W/2+roadW*.55,H);x.closePath();x.fill();
+ // lane markers
+ x.strokeStyle='#eee';x.lineWidth=4;x.setLineDash([24,28]);x.beginPath();x.moveTo(W/2,horizon);x.lineTo(W/2,H);x.stroke();x.setLineDash([]);
+ // roadside palms
+ for(let i=0;i<12;i++){let yy=horizon+(i/12)*(H-horizon);let scale=(yy-horizon)/(H-horizon);let side=i%2?-1:1, px=W/2+side*(roadW*.72+scale*W*.11);x.strokeStyle='#583f29';x.lineWidth=3*scale+1;x.beginPath();x.moveTo(px,yy);x.lineTo(px,yy-55*scale-10);x.stroke();x.fillStyle='#1f5c35';for(let j=0;j<5;j++){x.beginPath();x.ellipse(px+rnd(-18,18)*scale,yy-58*scale+rnd(-7,7),18*scale,6*scale,rnd(-1,1),0,Math.PI*2);x.fill()}}
+ // traffic
+ traffic.forEach(v=>{let yy=horizon+v.z*(H-horizon);let sc=.25+v.z*.9;let px=W/2+v.lane*(roadW*.43)*v.z;car(px,yy,38*sc,70*sc,v.color)});
+ // player
+ let py=H*.79, px=W/2+lane*roadW*.43;car(px,py,56,96,'#e9eef4',true);
+}
+function loop(now){if(!running){draw();requestAnimationFrame(loop);return}let dt=Math.min(.035,(now-t||16)/1000);t=now;if(!paused){
+ let accel=keys.w||keys.arrowup?85:keys.s||keys.arrowdown?-95:20;speed=Math.max(0,Math.min(260,speed+accel*dt));
+ if(keys.a||keys.arrowleft)target=Math.max(-1,target-dt*2.6);if(keys.d||keys.arrowright)target=Math.min(1,target+dt*2.6);lane+=(target-lane)*dt*7;
+ let boosting=keys[' ']&&nitro>0&&speed>40;if(boosting){speed=Math.min(330,speed+160*dt);nitro=Math.max(0,nitro-28*dt)}else nitro=Math.min(100,nitro+8*dt);
+ dist+=speed*dt/3600;spawn-=dt;if(spawn<=0){traffic.push({lane:Math.floor(rnd(-2,3)),z:0,color:['#d33','#39a','#e5b72f','#ddd','#6b4aa8'][Math.floor(rnd(0,5))]});spawn=Math.max(.45,1.3-speed/300)+rnd(0,.5)}
+ traffic.forEach(v=>{v.z+=(speed*.9)*dt/160;});traffic=traffic.filter(v=>v.z<1.15);
+ traffic.forEach(v=>{if(v.z>.83&&v.z<1.02&&Math.abs(v.lane-lane)<.34&&speed>35){speed*=.72;nitro=Math.max(0,nitro-12)}})
+ if(dist>best){best=dist;localStorage.horizonBest=best}
+}
+document.getElementById('speed').textContent=Math.round(speed);document.getElementById('dist').textContent=dist.toFixed(1);document.getElementById('nitroFill').style.width=nitro+'%';draw();requestAnimationFrame(loop)}
+document.getElementById('play').onclick=reset;requestAnimationFrame(loop);
+</script>
+</body></html>
